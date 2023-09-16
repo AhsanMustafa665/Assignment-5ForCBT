@@ -15,8 +15,8 @@ const passwordField = document.getElementById("password");
 const otpField = document.getElementById("otp");
 const warningMsg = document.getElementById("warning-msg");
 const accountDetails = {
-  email: "f",
-  password: "1",
+  email: "faisal@gmail.com",
+  password: "123456",
 };
 const loginBtn = () => {
   const displayPin = document.getElementById("display-pin").value;
