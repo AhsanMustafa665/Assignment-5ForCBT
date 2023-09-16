@@ -26,48 +26,66 @@
       Welcome to
       <span style="color: rgb(84, 60, 221)">Login page</span>
     </h2>
+
     <div class="row mt-5">
-      <div class="col-md-6 bg w-50 pt-5 px-4">
-        <h5 class="text-white pb-1 text-center">Please Login</h5>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <h5
+          class="text-danger fw-bold rounded-2px-3 py-1 w-50 text-center mb-3"
+          id="warning-msg"
+        ></h5>
+      </div>
+      <div class="col-md-6 bg d-block pt-5 px-4">
+        <h5 class="text-white pb-1 text-center fw-bold">Please Login</h5>
         <div class="input-group mb-3">
           <input
+            id="email"
             type="email"
-            class="form-control"
+            class="form-control fw-bold"
             placeholder="Enter your email"
             aria-label="email"
             aria-describedby="basic-addon2"
+            required
           />
         </div>
         <div class="input-group mb-3">
           <input
+            id="password"
             type="password"
-            class="form-control"
+            class="form-control fw-bold"
             placeholder="Enter your passcode"
             aria-label="password"
             aria-describedby="basic-addon2"
+            required
           />
         </div>
         <div class="input-group mb-3">
           <input
+            id="otp"
             type="text"
-            class="form-control"
+            class="form-control fw-bold"
             placeholder="Enter your OTP "
             aria-label="otp"
             aria-describedby="basic-addon2"
+            required
           />
         </div>
         <div class="text-center">
-          <button type="button" class="btn btn-outline-light w-50 mb-3 fw-bold">
+          <button
+            onclick="loginBtn()"
+            type="button"
+            class="btn btn-outline-light w-50 mb-3 fw-bold"
+          >
             Login <i class="fa-solid fa-right-to-bracket ps-1 pt-1"></i>
           </button>
         </div>
       </div>
       <div class="col-md-6 d-block mx-0">
         <div class="pin-generator half-width rounded-3">
-          <h5 class="text-white pb-1">Your OTP is</h5>
+          <h5 class="text-white pb-1 fw-bold">Your OTP is</h5>
           <input
             id="display-pin"
-            class="form-control w-75 mx-auto"
+            placeholder="Type the button below"
+            class="form-control w-75 mx-auto fw-bold"
             type="text"
           />
           <button onclick="generatePin()" class="generate-btn mt-5">
@@ -77,6 +95,7 @@
         <!-- </div> -->
       </div>
     </div>
+    <script src="/JS/login.js"></script>
     <!-- bootstrap js link -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
